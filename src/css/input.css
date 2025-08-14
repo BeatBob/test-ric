@@ -1,0 +1,6 @@
+@import "tailwindcss";
+/* @source ".*.{html,js,ts}" */
+
+.container-narrow {
+  @apply max-w-6xl mx-auto px-4;
+}

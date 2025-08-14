@@ -1,0 +1,22 @@
+{
+  "name": "test-ric",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:css": "npx @tailwindcss/cli -i ./src/css/input.css -o ./public/style.css --watch",
+    "dev:serve": "browser-sync start --server --files \"index.html, public/style.css, src/**/*.js, public/**/*.*\" --port 5173 --startPath index.html",
+    "start": "concurrently -k \"npm:dev:css\" \"npm:dev:serve\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "autoprefixer": "^10.4.21",
+    "browser-sync": "^3.0.4",
+    "concurrently": "^9.2.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.12"
+  }
+}

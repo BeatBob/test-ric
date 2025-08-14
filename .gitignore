@@ -1,0 +1,6 @@
+node_modules/
+dist/
+build/
+.env
+# Optional: ignore generated CSS if you prefer to build during deploy
+# src/css/style.css
