@@ -1,12 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test RIC - Pixel Perfect</title>
-    <link rel="stylesheet" href="./public/style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>An Invitation to the Hidden</title>
+
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      }
+      /* small tweak so images keep a consistent square ratio in the gallery */
+      .gallery-item {
+        aspect-ratio: 1 / 1;
+      }
+    </style>
   </head>
-  <body>
-    test
+
+  <body class="bg-white text-black">
+    <div class="container mx-auto border-4 border-black p-6">
+      <!-- Top: header and hero image -->
+      <header class="gap-6">
+        <div class="lg:w-1/3 mb-4">
+          <h1 class="uppercase font-black text-3xl md:text-4xl leading-tight tracking-tight">
+            An invitation<br />to the hidden
+          </h1>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <!-- big top image -->
+          <div class="w-full">
+            <img
+              src="https://picsum.photos/id/237/800/800?grayscale"
+              alt="hero"
+              class="w-full h-56 md:h-72 object-cover grayscale"
+            />
+          </div>
+
+          <!-- info row: left meta blocks and centered paragraph -->
+          <div class="flex flex-wrap lg:flex-nowrap items-center gap-4">
+            <div class="flex flex-wrap lg:flex-nowrap gap-6">
+              <div class="text-xs uppercase tracking-wider">
+                <div class="whitespace-nowrap font-semibold">Curated selection of</div>
+                <div class="whitespace-nowrap text-lg">Fine spirits</div>
+              </div>
+
+              <div class="text-xs uppercase tracking-wider">
+                <div class="whitespace-nowrap font-semibold">A hidden gem</div>
+                <div class="whitespace-nowrap text-lg">7 nights / week</div>
+              </div>
+            </div>
+
+            <div class="md:pl-6">
+              <p class="text-sm text-gray-700">
+                Step into a place where time slows down and the night feels endless. Our speakeasy offers a unique,
+                intimate atmosphere — perfect for those seeking something more than the usual. Come for the experience,
+                stay for the vibe.
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- BEHIND section -->
+      <section class="mt-10 text-center border-t border-gray-200 pt-8">
+        <h2 class="text-3xl font-extrabold uppercase">BEHIND</h2>
+        <div class="text-sm font-semibold mt-1">Closed Doors</div>
+        <p class="mt-4 text-sm text-gray-700 max-w-2xl mx-auto">
+          Our speakeasy offers an atmosphere that's both sleek and relaxed, perfect for those who appreciate the finer
+          things in life. Whether you're here for a quiet drink or to linger into the night, every moment feels
+          exclusive.
+        </p>
+      </section>
+
+      <!-- Gallery -->
+      <section class="mt-8">
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+          <div class="overflow-hidden gallery-item">
+            <img
+              src="https://picsum.photos/id/237/800/800?grayscale"
+              alt=""
+              class="w-full h-full object-cover grayscale"
+            />
+          </div>
+          <div class="overflow-hidden gallery-item">
+            <img
+              src="https://picsum.photos/id/237/800/800?grayscale"
+              alt=""
+              class="w-full h-full object-cover grayscale"
+            />
+          </div>
+          <div class="overflow-hidden gallery-item">
+            <img
+              src="https://picsum.photos/id/237/800/800?grayscale"
+              alt=""
+              class="w-full h-full object-cover grayscale"
+            />
+          </div>
+
+          <div class="overflow-hidden gallery-item">
+            <img
+              src="https://picsum.photos/id/237/800/800?grayscale"
+              alt=""
+              class="w-full h-full object-cover grayscale"
+            />
+          </div>
+          <div class="overflow-hidden gallery-item">
+            <img
+              src="https://picsum.photos/id/237/800/800?grayscale"
+              alt=""
+              class="w-full h-full object-cover grayscale"
+            />
+          </div>
+          <div class="overflow-hidden gallery-item">
+            <img
+              src="https://picsum.photos/id/237/800/800?grayscale"
+              alt=""
+              class="w-full h-full object-cover grayscale"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer button -->
+      <footer class="mt-6 flex justify-center">
+        <button class="text-xs uppercase tracking-wider bg-black text-white px-6 py-2">Guestlist</button>
+      </footer>
+    </div>
   </body>
 </html>
