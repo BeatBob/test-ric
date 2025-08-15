@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>An Invitation to the Hidden</title>
 
-    <!-- Tailwind Play CDN -->
     <link rel="stylesheet" href="./public/style.css" />
 
     <!-- Google Font -->
@@ -21,10 +20,6 @@
       }
       body {
         font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      }
-      /* small tweak so images keep a consistent square ratio in the gallery */
-      .gallery-item {
-        aspect-ratio: 1 / 1;
       }
     </style>
   </head>
@@ -45,7 +40,7 @@
             <img
               src="https://picsum.photos/id/237/800/800?grayscale"
               alt="hero"
-              class="w-full h-56 md:h-72 object-cover grayscale"
+              class="w-full aspect-video sm:aspect-[16/6] object-cover grayscale"
             />
           </div>
 
@@ -54,12 +49,12 @@
             <div class="flex flex-wrap lg:flex-nowrap gap-6">
               <div class="text-xs uppercase tracking-wider">
                 <div class="whitespace-nowrap font-semibold">Curated selection of</div>
-                <div class="whitespace-nowrap text-lg">Fine spirits</div>
+                <div class="whitespace-nowrap text-lg font-bold">Fine spirits</div>
               </div>
 
               <div class="text-xs uppercase tracking-wider">
                 <div class="whitespace-nowrap font-semibold">A hidden gem</div>
-                <div class="whitespace-nowrap text-lg">7 nights / week</div>
+                <div class="whitespace-nowrap text-lg font-bold">7 nights / week</div>
               </div>
             </div>
 
@@ -88,56 +83,70 @@
       <!-- Gallery -->
       <section class="mt-8">
         <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-          <div class="overflow-hidden gallery-item">
+          <div class="group overflow-hidden aspect-square hover:shadow-lg transition-all cursor-zoom-in">
             <img
               src="https://picsum.photos/id/237/800/800?grayscale"
               alt=""
-              class="w-full h-full object-cover grayscale"
+              class="w-full h-full group-hover:scale-105 transition-all object-cover grayscale"
             />
           </div>
-          <div class="overflow-hidden gallery-item">
+          <div class="group overflow-hidden aspect-square hover:shadow-lg transition-all cursor-zoom-in">
             <img
               src="https://picsum.photos/id/237/800/800?grayscale"
               alt=""
-              class="w-full h-full object-cover grayscale"
+              class="w-full h-full group-hover:scale-105 transition-all object-cover grayscale"
             />
           </div>
-          <div class="overflow-hidden gallery-item">
+          <div class="group overflow-hidden aspect-square hover:shadow-lg transition-all cursor-zoom-in">
             <img
               src="https://picsum.photos/id/237/800/800?grayscale"
               alt=""
-              class="w-full h-full object-cover grayscale"
+              class="w-full h-full group-hover:scale-105 transition-all object-cover grayscale"
             />
           </div>
 
-          <div class="overflow-hidden gallery-item">
+          <div class="group overflow-hidden aspect-square hover:shadow-lg transition-all cursor-zoom-in">
             <img
               src="https://picsum.photos/id/237/800/800?grayscale"
               alt=""
-              class="w-full h-full object-cover grayscale"
+              class="w-full h-full group-hover:scale-105 transition-all object-cover grayscale"
             />
           </div>
-          <div class="overflow-hidden gallery-item">
+          <div class="group overflow-hidden aspect-square hover:shadow-lg transition-all cursor-zoom-in">
             <img
               src="https://picsum.photos/id/237/800/800?grayscale"
               alt=""
-              class="w-full h-full object-cover grayscale"
+              class="w-full h-full group-hover:scale-105 transition-all object-cover grayscale"
             />
           </div>
-          <div class="overflow-hidden gallery-item">
+          <div class="group overflow-hidden aspect-square hover:shadow-lg transition-all cursor-zoom-in">
             <img
               src="https://picsum.photos/id/237/800/800?grayscale"
               alt=""
-              class="w-full h-full object-cover grayscale"
+              class="w-full h-full group-hover:scale-105 transition-all object-cover grayscale"
             />
           </div>
         </div>
       </section>
 
+      <!-- Image modal -->
+      <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center p-4 z-50">
+        <button
+          id="modal-close"
+          class="absolute top-4 right-4 text-white text-2xl font-bold leading-none cursor-pointer"
+        >
+          ×
+        </button>
+        <img id="modal-img" src="" alt="" class="max-w-full max-h-full object-contain rounded" />
+      </div>
+
       <!-- Footer button -->
       <footer class="mt-6 flex justify-center">
-        <button class="text-xs uppercase tracking-wider bg-black text-white px-6 py-2">Guestlist</button>
+        <button class="text-xs uppercase tracking-wider bg-black text-white px-6 py-2 cursor-pointer">Guestlist</button>
       </footer>
+
+      <!-- defer script -->
+      <script src="src/js/script.js" defer></script>
     </div>
   </body>
 </html>
